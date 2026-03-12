@@ -31,6 +31,29 @@
         .feature-icon { font-size: 3em; margin-bottom: 20px; }
         .feature-card h3 { color: #667eea; margin-bottom: 15px; }
         .feature-highlight { color: #e74c3c; font-weight: bold; }
+        .services { padding: 80px 0; }
+        .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        .service-item { background: #f8f9fa; padding: 30px; border-radius: 10px; border-left: 4px solid #667eea; }
+        .service-item h3 { color: #667eea; margin-bottom: 15px; }
+        .service-tag { display: inline-block; background: #667eea; color: white; padding: 3px 10px; border-radius: 15px; font-size: 0.8em; margin-top: 10px; }
+        .gallery { padding: 80px 0; background: #f8f9fa; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 50px; }
+        .gallery-item { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+        .gallery-img { width: 100%; height: 250px; overflow: hidden; }
+        .gallery-img img { width: 100%; height: 100%; object-fit: cover; }
+        .gallery-info { padding: 20px; }
+        .gallery-info h3 { color: #667eea; margin-bottom: 10px; }
+        .compare { padding: 80px 0; background: #1a1a2e; color: white; }
+        .compare-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 50px; text-align: center; }
+        .compare-number { font-size: 3em; color: #667eea; font-weight: bold; }
+        .contact { padding: 80px 0; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; }
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 50px; }
+        .contact-card { background: rgba(255,255,255,0.1); padding: 40px; border-radius: 15px; }
+        .contact-item { margin-bottom: 20px; }
+        .contact-item strong { display: block; margin-bottom: 5px; color: #ffd700; }
+        footer { background: #1a1a2e; color: white; padding: 40px 0; text-align: center; }
+        footer a { color: white; text-decoration: none; margin: 0 15px; }
+        .footer-highlight { color: #667eea; font-weight: bold; }
     </style>
 </head>
 <body>
@@ -62,7 +85,8 @@
             </div>
         </div>
     </section>
-        <section class="features" id="about">
+
+    <section class="features">
         <div class="container">
             <h2 class="section-title">为什么选择华特</h2>
             <p class="section-subtitle">专注特斯拉维修，专业值得信赖</p>
@@ -71,228 +95,232 @@
                     <div class="feature-icon">💰</div>
                     <h3>价格优势</h3>
                     <p class="feature-highlight">仅需直营店一半价格</p>
-                    <p>同样品质，更实惠的价格，让您省钱又放心</p>
+                    <p>同样品质，更实惠的价格</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🛡️</div>
                     <h3>质保承诺</h3>
-                    <p class="feature-highlight">两年质保（与官方相同）</p>
-                    <p>所有品牌件均提供两年质保，售后无忧</p>
+                    <p class="feature-highlight">两年质保</p>
+                    <p>与官方相同的质保期</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🏭</div>
                     <h3>规模实力</h3>
-                    <p class="feature-highlight">2000+平米专业场地</p>
-                    <p>大型特斯拉专修门店，设备齐全，环境专业</p>
+                    <p class="feature-highlight">2000+平米场地</p>
+                    <p>大型专业维修门店</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🔧</div>
                     <h3>专业经验</h3>
-                    <p class="feature-highlight">数年特斯拉维修积累</p>
-                    <p>专注特斯拉，熟悉全系车型常见问题和解决方案</p>
+                    <p class="feature-highlight">数年维修积累</p>
+                    <p>专注特斯拉全系车型</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">📍</div>
                     <h3>地理位置</h3>
-                    <p class="feature-highlight">南村收费站出口即到</p>
-                    <p>番禺区南村镇南大科技园内，交通便利</p>
+                    <p class="feature-highlight">南村收费站即到</p>
+                    <p>交通便利，位置好找</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">⚡</div>
                     <h3>快速响应</h3>
-                    <p class="feature-highlight">专业高效服务</p>
-                    <p>常规保养当天完成，维修项目快速交车</p>
+                    <p class="feature-highlight">高效服务</p>
+                    <p>常规保养当天完成</p>
                 </div>
             </div>
         </div>
     </section>
-    <section class="services" id="services" style="padding: 80px 0;">
+
+    <section class="services" id="services">
         <div class="container">
             <h2 class="section-title">专业服务项目</h2>
             <p class="section-subtitle">专注特斯拉常规保养和通病维修</p>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
-                <div style="background: #f8f9fa; padding: 30px; border-radius: 10px; border-left: 4px solid #667eea;">
-                    <h3 style="color: #667eea; margin-bottom: 15px;">❄️ 冷凝器清洗</h3>
-                    <p>专业清洗空调冷凝器，提升制冷效果，降低能耗</p>
-                    <span style="display: inline-block; background: #667eea; color: white; padding: 3px 10px; border-radius: 15px; font-size: 0.8em; margin-top: 10px;">常规保养</span>
+            <div class="service-grid">
+                <div class="service-item">
+                    <h3>❄️ 冷凝器清洗</h3>
+                    <p>专业清洗空调冷凝器，提升制冷效果</p>
+                    <span class="service-tag">常规保养</span>
                 </div>
-                <div style="background: #f8f9fa; padding: 30px; border-radius: 10px; border-left: 4px solid #667eea;">
-                    <h3 style="color: #667eea; margin-bottom: 15px;">🌬️ 空调滤芯更换</h3>
-                    <p>原厂品质空调滤芯更换，保障车内空气质量</p>
-                    <span style="display: inline-block; background: #667eea; color: white; padding: 3px 10px; border-radius: 15px; font-size: 0.8em; margin-top: 10px;">常规保养</span>
+                <div class="service-item">
+                    <h3>🌬️ 空调滤芯更换</h3>
+                    <p>原厂品质空调滤芯，保障车内空气质量</p>
+                    <span class="service-tag">常规保养</span>
                 </div>
-                <div style="background: #f8f9fa; padding: 30px; border-radius: 10px; border-left: 4px solid #667eea;">
-                    <h3 style="color: #667eea; margin-bottom: 15px;">🛑 刹车保养</h3>
-                    <p>刹车片更换、刹车盘修复、刹车油更换，保障行车安全</p>
-                    <span style="display: inline-block; background: #667eea; color: white; padding: 3px 10px; border-radius: 15px; font-size: 0.8em; margin-top: 10px;">安全项目</span>
+                <div class="service-item">
+                    <h3>🛑 刹车保养</h3>
+                    <p>刹车片更换、刹车盘修复、刹车油更换</p>
+                    <span class="service-tag">安全项目</span>
                 </div>
-                <div style="background: #f8f9fa; padding: 30px; border-radius: 10px; border-left: 4px solid #667eea;">
-                    <h3 style="color: #667eea; margin-bottom: 15px;">🔊 异响处理</h3>
-                    <p>专业诊断底盘、悬挂、车门等异响问题，精准维修</p>
-                    <span style="display: inline-block; background: #667eea; color: white; padding: 3px 10px; border-radius: 15px; font-size: 0.8em; margin-top: 10px;">通病维修</span>
+                <div class="service-item">
+                    <h3>🔊 异响处理</h3>
+                    <p>专业诊断底盘、悬挂、车门异响问题</p>
+                    <span class="service-tag">通病维修</span>
                 </div>
-                <div style="background: #f8f9fa; padding: 30px; border-radius: 10px; border-left: 4px solid #667eea;">
-                    <h3 style="color: #667eea; margin-bottom: 15px;">⚙️ 底盘件摆臂更换</h3>
-                    <p>下摆臂、上摆臂、球头等底盘件更换，恢复操控性能</p>
-                    <span style="display: inline-block; background: #667eea; color: white; padding: 3px 10px; border-radius: 15px; font-size: 0.8em; margin-top: 10px;">底盘维修</span>
+                <div class="service-item">
+                    <h3>⚙️ 底盘件摆臂更换</h3>
+                    <p>下摆臂、上摆臂、球头等底盘件更换</p>
+                    <span class="service-tag">底盘维修</span>
                 </div>
-                <div style="background: #f8f9fa; padding: 30px; border-radius: 10px; border-left: 4px solid #667eea;">
-                    <h3 style="color: #667eea; margin-bottom: 15px;">🛞 减震维修更换</h3>
-                    <p>减震器检测、维修、更换，提升行驶舒适性</p>
-                    <span style="display: inline-block; background: #667eea; color: white; padding: 3px 10px; border-radius: 15px; font-size: 0.8em; margin-top: 10px;">悬挂系统</span>
+                <div class="service-item">
+                    <h3>🛞 减震维修更换</h3>
+                    <p>减震器检测、维修、更换</p>
+                    <span class="service-tag">悬挂系统</span>
                 </div>
-                <div style="background: #f8f9fa; padding: 30px; border-radius: 10px; border-left: 4px solid #667eea;">
-                    <h3 style="color: #667eea; margin-bottom: 15px;">🖥️ 主机维修</h3>
-                    <p>中控主机故障维修、系统升级、黑屏卡顿处理</p>
-                    <span style="display: inline-block; background: #667eea; color: white; padding: 3px 10px; border-radius: 15px; font-size: 0.8em; margin-top: 10px;">电子系统</span>
+                <div class="service-item">
+                    <h3>🖥️ 主机维修</h3>
+                    <p>中控主机故障维修、系统升级</p>
+                    <span class="service-tag">电子系统</span>
                 </div>
-                <div style="background: #f8f9fa; padding: 30px; border-radius: 10px; border-left: 4px solid #667eea;">
-                    <h3 style="color: #667eea; margin-bottom: 15px;">🚪 门把手维修</h3>
-                    <p>隐藏式门把手故障维修、更换，解决弹出异常问题</p>
-                    <span style="display: inline-block; background: #667eea; color: white; padding: 3px 10px; border-radius: 15px; font-size: 0.8em; margin-top: 10px;">通病维修</span>
+                <div class="service-item">
+                    <h3>🚪 门把手维修</h3>
+                    <p>隐藏式门把手故障维修、更换</p>
+                    <span class="service-tag">通病维修</span>
                 </div>
-                <div style="background: #f8f9fa; padding: 30px; border-radius: 10px; border-left: 4px solid #667eea;">
-                    <h3 style="color: #667eea; margin-bottom: 15px;">🪟 玻璃更换</h3>
-                    <p>前挡玻璃、车窗玻璃更换，原厂品质保障</p>
-                    <span style="display: inline-block; background: #667eea; color: white; padding: 3px 10px; border-radius: 15px; font-size: 0.8em; margin-top: 10px;">外观修复</span>
+                <div class="service-item">
+                    <h3>🪟 玻璃更换</h3>
+                    <p>前挡玻璃、车窗玻璃更换</p>
+                    <span class="service-tag">外观修复</span>
                 </div>
-                <div style="background: #f8f9fa; padding: 30px; border-radius: 10px; border-left: 4px solid #667eea;">
-                    <h3 style="color: #667eea; margin-bottom: 15px;">🎨 钣金喷漆修复</h3>
-                    <p>专业钣金修复、喷漆服务，恢复车辆外观</p>
-                    <span style="display: inline-block; background: #667eea; color: white; padding: 3px 10px; border-radius: 15px; font-size: 0.8em; margin-top: 10px;">外观修复</span>
-                </div>
-            </div>
-        </div>
-    </section>
-        <section style="padding: 80px 0; background: #1a1a2e; color: white;">
-        <div class="container">
-            <h2 class="section-title" style="color: white;">华特实力数据</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 50px; text-align: center;">
-                <div style="padding: 30px;">
-                    <div style="font-size: 3em; color: #667eea; font-weight: bold;">50%</div>
-                    <div style="font-size: 1.1em; margin-top: 10px;">比直营店省下的费用</div>
-                </div>
-                <div style="padding: 30px;">
-                    <div style="font-size: 3em; color: #667eea; font-weight: bold;">2000+</div>
-                    <div style="font-size: 1.1em; margin-top: 10px;">平米专业场地</div>
-                </div>
-                <div style="padding: 30px;">
-                    <div style="font-size: 3em; color: #667eea; font-weight: bold;">2年</div>
-                    <div style="font-size: 1.1em; margin-top: 10px;">品牌件质保期</div>
-                </div>
-                <div style="padding: 30px;">
-                    <div style="font-size: 3em; color: #667eea; font-weight: bold;">数年</div>
-                    <div style="font-size: 1.1em; margin-top: 10px;">特斯拉维修经验</div>
+                <div class="service-item">
+                    <h3>🎨 钣金喷漆修复</h3>
+                    <p>专业钣金修复、喷漆服务</p>
+                    <span class="service-tag">外观修复</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <section style="padding: 80px 0; background: #f8f9fa;" id="gallery">
+    <section class="compare">
         <div class="container">
-            <h2 class="section-title">门店环境展示</h2>
-            <p class="section-subtitle">2000+平米专业场地，设备齐全，环境整洁</p>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 50px;">
-                <div style="background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
-                    <div style="width: 100%; height: 250px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2em;">门店外观照片</div>
-                    <div style="padding: 20px;">
-                        <h3 style="color: #667eea; margin-bottom: 10px;">门店外观</h3>
-                        <p>位于南大科技园内，交通便利，停车位充足</p>
-                    </div>
+            <h2 class="section-title">华特实力数据</h2>
+            <div class="compare-grid">
+                <div>
+                    <div class="compare-number">50%</div>
+                    <div>比直营店省下的费用</div>
                 </div>
-                <div style="background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
-                    <div style="width: 100%; height: 250px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2em;">维修车间照片</div>
-                    <div style="padding: 20px;">
-                        <h3 style="color: #667eea; margin-bottom: 10px;">专业维修车间</h3>
-                        <p>宽敞明亮的维修车间，专业设备一应俱全</p>
-                    </div>
+                <div>
+                    <div class="compare-number">2000+</div>
+                    <div>平米专业场地</div>
                 </div>
-                <div style="background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
-                    <div style="width: 100%; height: 250px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2em;">设备展示照片</div>
-                    <div style="padding: 20px;">
-                        <h3 style="color: #667eea; margin-bottom: 10px;">先进检测设备</h3>
-                        <p>专业诊断设备，精准定位故障</p>
-                    </div>
+                <div>
+                    <div class="compare-number">2年</div>
+                    <div>品牌件质保期</div>
                 </div>
-                <div style="background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
-                    <div style="width: 100%; height: 250px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2em;">客户休息区照片</div>
-                    <div style="padding: 20px;">
-                        <h3 style="color: #667eea; margin-bottom: 10px;">客户休息区</h3>
-                        <p>舒适的休息环境，等待也能很惬意</p>
-                    </div>
+                <div>
+                    <div class="compare-number">数年</div>
+                    <div>特斯拉维修经验</div>
                 </div>
-                <div style="background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
-                    <div style="width: 100%; height: 250px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2em;">配件仓库照片</div>
-                    <div style="padding: 20px;">
-                        <h3 style="color: #667eea; margin-bottom: 10px;">配件仓库</h3>
-                        <p>充足的正品配件库存，维修无需久等</p>
-                    </div>
-                </div>
-                <div style="background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
-                    <div style="width: 100%; height: 250px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2em;">团队合影照片</div>
-                    <div style="padding: 20px;">
-                        <h3 style="color: #667eea; margin-bottom: 10px;">专业团队</h3>
-                        <p>经验丰富的技师团队，专注特斯拉维修</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div style="background: #fff3cd; border: 1px solid #ffc107; padding: 20px; border-radius: 10px; margin-top: 30px; text-align: center;">
-                <strong style="color: #856404;">📸 图片上传说明</strong><br>
-                请将门店照片上传至 GitHub 仓库的 images 文件夹，<br>
-                然后在上方替换为实际的图片路径。
             </div>
         </div>
     </section>
-        <section style="padding: 80px 0; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;" id="contact">
+
+    <section class="gallery" id="gallery">
         <div class="container">
-            <h2 class="section-title" style="color: white;">联系我们</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 50px;">
-                <div style="background: rgba(255,255,255,0.1); padding: 40px; border-radius: 15px;">
-                    <h3 style="margin-bottom: 20px; font-size: 1.3em;">📍 门店地址</h3>
-                    <div style="margin-bottom: 20px;">
-                        <strong style="display: block; margin-bottom: 5px; color: #ffd700;">地址</strong>
+            <h2 class="section-title">门店环境展示</h2>
+            <p class="section-subtitle">2000+平米专业场地，设备齐全</p>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-img">
+                        <img src="images/门店门面.jpg" alt="门店门面">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>门店门面</h3>
+                        <p>位于南大科技园内，交通便利</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-img">
+                        <img src="images/维修工位.jpg" alt="维修工位">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>专业维修工位</h3>
+                        <p>宽敞明亮的维修车间</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-img">
+                        <img src="images/钣金工位.jpg" alt="钣金工位">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>钣金修复工位</h3>
+                        <p>专业钣金修复设备</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-img">
+                        <img src="images/喷漆工位.jpg" alt="喷漆工位">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>专业喷漆工位</h3>
+                        <p>专业喷漆设备</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-img">
+                        <img src="images/洗美工位.jpg" alt="洗美工位">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>洗美工位</h3>
+                        <p>专业洗车美容服务</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-img">
+                        <img src="images/客休区.jpg" alt="客休区">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>客户休息区</h3>
+                        <p>舒适的休息环境</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">联系我们</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3>📍 门店地址</h3>
+                    <div class="contact-item">
+                        <strong>地址</strong>
                         广州市番禺区南村镇南大科技园内<br>
                         （南村收费站出口处）
                     </div>
-                    <div style="margin-bottom: 20px;">
-                        <strong style="display: block; margin-bottom: 5px; color: #ffd700;">导航搜索</strong>
+                    <div class="contact-item">
+                        <strong>导航搜索</strong>
                         华特特斯拉专修广州店
-                    </div>
-                    <div style="background: rgba(255,255,255,0.2); padding: 15px; border-radius: 10px; margin-top: 20px;">
-                        🚗 交通便利，南村收费站出口即到，停车位充足
                     </div>
                 </div>
-                <div style="background: rgba(255,255,255,0.1); padding: 40px; border-radius: 15px;">
-                    <h3 style="margin-bottom: 20px; font-size: 1.3em;">📞 联系方式</h3>
-                    <div style="margin-bottom: 20px;">
-                        <strong style="display: block; margin-bottom: 5px; color: #ffd700;">咨询电话</strong>
+                <div class="contact-card">
+                    <h3>📞 联系方式</h3>
+                    <div class="contact-item">
+                        <strong>咨询电话</strong>
                         洪经理：13376728517
                     </div>
-                    <div style="margin-bottom: 20px;">
-                        <strong style="display: block; margin-bottom: 5px; color: #ffd700;">抖音号</strong>
+                    <div class="contact-item">
+                        <strong>抖音号</strong>
                         华特特斯拉专修广州店
                     </div>
-                    <div style="margin-bottom: 20px;">
-                        <strong style="display: block; margin-bottom: 5px; color: #ffd700;">营业时间</strong>
-                        周一至周日 9:00-18:00<br>
-                        紧急维修可提前预约
+                    <div class="contact-item">
+                        <strong>营业时间</strong>
+                        周一至周日 9:00-18:00
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer style="background: #1a1a2e; color: white; padding: 40px 0; text-align: center;">
+    <footer>
         <div class="container">
-            <div style="margin-bottom: 20px;">
-                <a href="#home" style="color: white; text-decoration: none; margin: 0 15px;">首页</a>
-                <a href="#services" style="color: white; text-decoration: none; margin: 0 15px;">服务项目</a>
-                <a href="#gallery" style="color: white; text-decoration: none; margin: 0 15px;">门店环境</a>
-                <a href="#contact" style="color: white; text-decoration: none; margin: 0 15px;">联系我们</a>
+            <div>
+                <a href="#home">首页</a>
+                <a href="#services">服务项目</a>
+                <a href="#gallery">门店环境</a>
+                <a href="#contact">联系我们</a>
             </div>
-            <p><span style="color: #667eea; font-weight: bold;">华特特斯拉专修广州店</span></p>
+            <p style="margin-top: 20px;"><span class="footer-highlight">华特特斯拉专修广州店</span></p>
             <p>广州市番禺区南村镇南大科技园内 | 咨询电话：13376728517（洪经理）</p>
             <p>价格仅为直营店一半 | 两年质保 | 2000+平米专业场地</p>
             <p style="margin-top: 20px; opacity: 0.7;">&copy; 2024 华特特斯拉专修. All rights reserved.</p>
